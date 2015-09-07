@@ -32,19 +32,31 @@ body
 	clearfix()
 
 .top-nav
-	margin 3rem 0
+	margin 3rem
 					
 .top-nav-li
 	display inline
 	margin 0 0.5rem
 	a
 		padding 1rem 
-		background dark-grey
+		background rgba(0,0,0, 0.5)
 		color white
 		text-decoration none
-		
+		&:hover
+			background rgba(0,0,0, 0.6)
 .wrap
 	center(800px)
 	text-align center
 .main-desc
+	background rgba(0,0,0, 0.3)
 	text-shadow 1px 1px 1px #999
+	padding 1rem 5rem
+	margin 1rem 0
+	letter-spacing .05rem
+	&:hover
+		background rgba(0,0,0, 0.35)
+	h1
+		border-bottom 1px dotted #fff
+		display inline-block
+	p
+		// text-shadow 1px 1px 1px #eee

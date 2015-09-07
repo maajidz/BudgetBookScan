@@ -268,7 +268,7 @@ body {
   clear: both;
 }
 .top-nav {
-  margin: 3rem 0;
+  margin: 3rem;
 }
 .top-nav-li {
   display: inline;
@@ -276,9 +276,12 @@ body {
 }
 .top-nav-li a {
   padding: 1rem;
-  background: #666;
+  background: rgba(0,0,0,0.5);
   color: #fff;
   text-decoration: none;
+}
+.top-nav-li a:hover {
+  background: rgba(0,0,0,0.6);
 }
 .wrap {
   *zoom: 1;
@@ -301,5 +304,16 @@ body {
   clear: both;
 }
 .main-desc {
+  background: rgba(0,0,0,0.3);
   text-shadow: 1px 1px 1px #999;
+  padding: 1rem 5rem;
+  margin: 1rem 0;
+  letter-spacing: 0.05rem;
+}
+.main-desc:hover {
+  background: rgba(0,0,0,0.35);
+}
+.main-desc h1 {
+  border-bottom: 1px dotted #fff;
+  display: inline-block;
 }
