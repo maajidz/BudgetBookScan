@@ -214,10 +214,11 @@ body {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 31.33333333333333%;
+  width: 21.03333333333333%;
   margin-left: 0%;
   margin-right: 3%;
   zoom: 1;
+  margin-left: 9%;
 }
 .logo-container:before,
 .logo-container:after {
@@ -243,10 +244,11 @@ body {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 65.66666666666666%;
+  width: 53.64999999999999%;
   margin-left: 0%;
   margin-right: 3%;
   zoom: 1;
+  float: right;
 }
 .nav:before,
 .nav:after {
@@ -268,7 +270,7 @@ body {
   clear: both;
 }
 .top-nav {
-  margin: 3rem;
+  margin: 3rem 0;
 }
 .top-nav-li {
   display: inline;
