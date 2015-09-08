@@ -1,13 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans)
-@import 'normalize'
-@import 'clearfix'
 @import 'jeet'
 
+@import 'normalize'
+@import 'clearfix'
 @import 'variables'
+@import 'tabs'
+@import 'scroll'
 
 body
 	color white
 	font-family 'Josefin Sans', sans-serif
+a
+	text-decoration none
 .page
 
 	
@@ -29,12 +33,13 @@ body
 	margin-left 9%
 
 .nav
-	col(1.65/3)
+	col(1.66/3)
 	clearfix()
 	float right
 .top-nav
 	margin 3rem 0
-					
+.active
+	border 1px solid teal-2
 .top-nav-li
 	display inline
 	margin 0 0.5rem
@@ -61,3 +66,8 @@ body
 		display inline-block
 	p
 		// text-shadow 1px 1px 1px #eee
+.tab-content
+	background teal
+	clearfix()
+.tabs-logo
+	col(1/3)
