@@ -335,7 +335,7 @@ th {
 .scroller::after {
   content: '';
   position: fixed;
-  width: 89.8%;
+  width: 70%;
   max-width: 1170px;
   left: 0;
   right: auto;
@@ -903,6 +903,10 @@ body {
 }
 a {
   text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
 }
 .page,
 .content,
@@ -1090,7 +1094,7 @@ a {
 .form-container:after {
   clear: both;
 }
-.form-container .address {
+.form-container .sidebar {
   *zoom: 1;
   float: left;
   clear: none;
@@ -1100,17 +1104,32 @@ a {
   margin-right: 3%;
   background: #008080;
   padding: 1rem 2rem;
+  text-align: justify;
+  height: 100%;
 }
-.form-container .address:before,
-.form-container .address:after {
+.form-container .sidebar:before,
+.form-container .sidebar:after {
   content: '';
   display: table;
 }
-.form-container .address:after {
+.form-container .sidebar:after {
   clear: both;
 }
-.form-container .address:last-child {
+.form-container .sidebar:last-child {
   margin-right: 0%;
+}
+.form-container .sidebar h2 {
+  text-align: center;
+}
+.form-container .sidebar img {
+  display: block;
+  margin: 0 auto;
+}
+.form-container .sidebar .location-div-text {
+  text-align: center;
+}
+.form-container .sidebar-2 {
+  background: #111;
 }
 .form-container .form-wrap {
   *zoom: 1;
@@ -1132,4 +1151,51 @@ a {
 }
 .form-container .form-wrap:last-child {
   margin-right: 0%;
+}
+.footer {
+  width: 100%;
+  background: #008080;
+  padding: 4rem 0 0;
+  zoom: 1;
+}
+.footer:before,
+.footer:after {
+  content: "";
+  display: table;
+}
+.footer:after {
+  clear: both;
+}
+.footer nav {
+  *zoom: 1;
+  width: auto;
+  max-width: 460px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer nav:before,
+.footer nav:after {
+  content: '';
+  display: table;
+}
+.footer nav:after {
+  clear: both;
+}
+.footer nav .footer-ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.footer nav .footer-ul li {
+  float: left;
+  padding: 0 1rem;
+}
+.footer span {
+  display: block;
+  text-align: center;
+  margin: 3rem 0;
 }

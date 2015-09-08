@@ -13,6 +13,9 @@ body
 	font-family 'Josefin Sans', sans-serif
 a
 	text-decoration none
+	color #fff
+li
+	list-style none
 .page
 
 	
@@ -76,10 +79,39 @@ a
 	background #333
 	margin 0 auto
 	clearfix()
-	.address
+	.sidebar
 		col(.906/3)
 		background teal
 		padding 1rem 2rem
+		text-align justify
+		height 100%
+		h2
+			text-align center
+		img
+			display block
+			margin 0 auto
+		.location-div-text
+			text-align center
+	.sidebar-2
+		background #111
 	.form-wrap
 		col(1.7/3)
 		margin 0 auto
+.footer
+	width 100%
+	background teal
+	padding 4rem 0 0
+	clearfix()
+	nav
+		center(460px)
+		.footer-ul
+			display inline-block
+			margin 0
+			padding 0
+			li
+				float left
+				padding 0 1rem
+	span
+		display block
+		text-align center
+		margin 3rem 0
