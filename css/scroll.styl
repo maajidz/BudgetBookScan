@@ -30,6 +30,7 @@
   margin-left 56px
   background-color #333
   padding 1em 1em 4em
+  text-align center
   &::before
     top 0
     height 50px
@@ -61,7 +62,7 @@
     margin-bottom 1em
   p
     font-size 14px
-    font-size 0.875rem
+    font-size 1.175rem
     line-height 1.4
     a
       color #aaa
@@ -105,9 +106,10 @@
       font-size 30px
       font-size 1.875rem
     p
-      font-size 18px
-      font-size 1.125rem
+      font-size 30px
+      font-size 1.625rem
       line-height 1.6
+      text-align center
 
   .cd-service::before, .cd-service::after
     width 420px
@@ -120,4 +122,17 @@
     -webkit-transition color, 0.5s
     -moz-transition color, 0.5s
     transition color, 0.5s
-
+    
+.scroller
+  h2, h3
+    margin 0
+    text-transform uppercase
+    text-align center
+    display inline-block
+  h3
+    border-bottom 1px dotted #999
+  
+.cd-service-divider
+  h2
+    padding 3rem 0
+  
