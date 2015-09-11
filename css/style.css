@@ -335,7 +335,7 @@ th {
 .scroller::after {
   content: '';
   position: fixed;
-  width: 70%;
+  width: 90%;
   max-width: 1170px;
   left: 0;
   right: auto;
@@ -416,7 +416,7 @@ th {
   right: 100%;
   z-index: 2;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1024px) {
   .cd-service {
     margin-left: 420px;
     padding: 6em 2em;
@@ -484,7 +484,7 @@ th {
 }
 .cd-form {
   width: 90%;
-  max-width: 600px;
+  max-width: 601px;
   margin: 0 auto;
 }
 .cd-form::after {
@@ -946,6 +946,7 @@ li {
   margin-right: 3%;
   zoom: 1;
   margin-left: 9%;
+  padding-top: 1.5rem;
 }
 .logo-container:before,
 .logo-container:after {
@@ -1127,9 +1128,6 @@ li {
 }
 .form-container .sidebar .location-div-text {
   text-align: center;
-}
-.form-container .sidebar-2 {
-  background: #111;
 }
 .form-container .form-wrap {
   *zoom: 1;
