@@ -8,6 +8,7 @@
 @import 'tabs'
 @import 'scroll'
 @import 'form'
+@import 'gradient'
 
 body
 	color white
@@ -37,25 +38,71 @@ li
 	clearfix()
 	margin-left 9%
 	padding-top 1.5rem
-
 .nav
 	col(1.66/3)
 	clearfix()
 	float right
+	.ham
+		display none
+		+below(800px)
+			display block
+			float right
+			margin 2.5rem 4rem
+			cursor pointer
+			border 1px solid #333
+			border-radius 3px 3px 3px 3px
+			cursor pointer
+			display block
+			height 45px
+			position relative
+			width 40px
+			background #333
+			&:hover
+				background #111
+			+below(480px)
+				margin 2rem 2rem
+				
+			div
+				background-color #999
+				border-radius 2px 2px 2px 2px
+				height 4px
+				margin .5rem 0
+				width 70%
+				margin-left auto
+				margin-right auto
 .top-nav
 	margin 3rem 0
+	+below(800px)
+		display none
+		position absolute
+		right 6.5rem
+		top 5.5rem
+		margin 0
+		width 77%
+		transition()
+		+below(490px)
+			right 4.5rem
+			top 5rem
 .active
 	border 1px solid teal-2
 .top-nav-li
 	display inline
 	margin 0 0.5rem
+	+below(800px)
+		display block
+		width 100%
 	a
 		padding 1rem 
 		background rgba(0,0,0, 0.5)
+		border 1px solid rgba(0,0,0, 0.5)
 		color white
 		text-decoration none
+		width 100%
 		&:hover
 			background rgba(0,0,0, 0.6)
+			border-bottom 1px solid teal
+		+below(800px)
+			display block
 .wrap
 	center(800px)
 	text-align center
@@ -82,12 +129,21 @@ li
 	margin 0 auto
 	clearfix()
 	.sidebar
-		col(.906/3)
+		col(.98/3)
 		// width 355px
-		background teal
-		padding 1rem 2rem
-		text-align justify
 		height 100%
+		// background linear-gradient(180deg, teal 38%, #111 30%)
+		background teal
+		padding 1rem
+		text-align justify
+		+between(320px, 800px)
+			col(1/1)
+			text-align center
+			padding 0
+			img
+				width 100px
+		.form-div, .faq-div
+			text-align center
 		h2
 			text-align center
 		img
@@ -95,18 +151,26 @@ li
 			margin 0 auto
 		.location-div-text
 			text-align center
-	// .sidebar-2
+	// .sidebar-3
+	// 	col(.906/3)
 	// 	background #111
+	// 	clearfix()
 	.form-wrap
 		col(1.7/3)
 		margin 0 auto
+		+below(800px)
+			col(1/1)
+			input, textarea
+				width 85%
+				+below(480px)
+					width 80%
 .footer
 	width 100%
 	background teal
 	padding 4rem 0 0
 	clearfix()
 	nav
-		center(460px)
+		center(320px)
 		.footer-ul
 			display inline-block
 			margin 0
@@ -118,3 +182,5 @@ li
 		display block
 		text-align center
 		margin 3rem 0
+		
+@import 'faq'

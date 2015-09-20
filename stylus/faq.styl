@@ -1,0 +1,20 @@
+// .form-container
+// 	.sidebar
+// 		col(.906/3, gutter: 0)
+.faq-wrap
+	col(1.9/3, gutter:0)
+	p
+		text-indent 1rem
+	+between(800px, 1080px)
+		col(1.8/3, gutter:0)
+	+below(800px)
+		col(1/1)
+.faq-centered
+	center(800px)
+	+below(800px)
+		center(700px)
+	+below(641px)
+		padding-left 1rem
+.faq-q-title
+	border-bottom 1px solid teal
+	cursor pointer

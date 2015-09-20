@@ -13,11 +13,12 @@ Images
 
 * https://images.unsplash.com/3/alejandroescamilla-book.jpg?q=80&fm=jpg&s=863c3ea73cc0af3785af91d15109f1b4
 
-Icons
+Icons & Logo
 
 Icons made by
 
 *  http://www.flaticon.com/authors/freepik
+*  http://www.flaticon.com/authors/anton-saputro
 
 Freepiks licensed by
 

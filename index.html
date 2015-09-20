@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Budget Book Scanning - From Books to Bytes" />
 	<meta name="keywords" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs." />
-	<meta name="author" content="Codrops" />
 	<link rel="shortcut icon" href="../favicon.ico">
 	<title>BudgetBookScan - From Books to Bytes</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
 	<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+	<script type="text/javascript" src="js/menu_toggle.js"></script>
+
 </head>
 <body>
 <div class="page">
@@ -26,12 +27,18 @@
 					</a>
 				</span>
 				</div>
-				<nav class="nav">
-					<ul class="top-nav">
-						<li class="top-nav-li"><a href="" class="active">Home</a></li>
-						<li class="top-nav-li"><a href="">Services</a></li>
-						<li class="top-nav-li"><a href="">About</a></li>
-						<li class="top-nav-li"><a href="">Contact Us</a></li>
+				<nav class="nav" id="nav" role="navigation">
+				<div class="ham" onclick="toggle_visibility('top-nav');">
+				<div></div>
+				<div></div>
+				<div></div>
+				</div>
+
+					<ul class="top-nav" id="top-nav">
+						<li class="top-nav-li"><a href="index.html" class="active">Home</a></li>
+						<li class="top-nav-li"><a href="form.html">Enquire</a></li>
+						<li class="top-nav-li"><a href="faq.html">FAQ</a></li>
+						<li class="top-nav-li"><a href="#form-container">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -82,79 +89,22 @@
 	</div>
 
 
-<!-- 	<div class="tab-content">
-				<aside class="tabs-logo">
-				<h2>Majid Zargar</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit saepe nulla voluptates amet veritatis nesciunt provident, fuga iure perspiciatis libero. Consequatur tempora odio ea dolore veniam iure quaerat. Cupiditate, nemo.</p>
-					<h3>MAjid Zaragr</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nobis eveniet a laudantium quam. Temporibus quas ducimus quasi qui mollitia ab sint officia quam facilis? Laborum illo, repellendus. Quam, in!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi repellat aliquam nam quisquam, pariatur accusamus ab a commodi, magnam harum unde aut quae. Ipsam dolorem eveniet, aliquid deleniti temporibus, nesciunt.</p>
-					
-				</aside>
-				<section class="tabs">
-	          <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
-	        <label for="tab-1" class="tab-label-1">How it Works</label>
-
-	          <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
-	        <label for="tab-2" class="tab-label-2">Services</label>
-
-	          <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
-	        <label for="tab-3" class="tab-label-3">Work</label>
-		
-	          <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
-	        <label for="tab-4" class="tab-label-4">Contact</label>
-	        
-		    <div class="clear-shadow"></div>
-			
-	        <div class="content">
-		        <div class="content-1">
-					<h2>About us</h2>
-	                    <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-					<h3>How we work</h3>
-					<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
-			    </div>
-		        <div class="content-2">
-					<h2>Services</h2>
-	                    <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
-					<h3>Excellence</h3>
-					<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
-			    </div>
-		        <div class="content-3">
-					<h2>Portfolio</h2>
-	                    <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
-					<h3>Examples</h3>
-					<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
-			    </div>
-			    <div class="content-4">
-					<h2>Contact</h2>
-	                    <p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.</p>
-					<h3>Get in touch</h3>
-					<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
-			    </div>
-	        </div>
-		</section>
-	</div> -->
-
-
-<div class="form-container">
+<div class="form-container" id="form-container">
 	<div class="sidebar sidebar-2">
 
 			<div class="location-div">
 			<h2>Reach us at:</h2>
-				<img src="images/situation.svg" rel="location" alt="">
+				<img src="images/location.svg" rel="location" alt="">
 			</div>
 			<div class="location-div-text">
 				<h3>Budget Book Scanning</h3>
 					<p>200 Bates Drive, Monsey, NY 10952</p>
-					<p>(845) 598-0467</p>
+					<p>(845)-352-3035</p>
 			</div>
 			<h3>Contact</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente reprehenderit eaque expedita omnis, perferendis corrupti dicta beatae facere. Reprehenderit rerum doloremque ipsam, adipisci repellendus! Quibusdam distinctio nisi doloremque totam commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tempore, voluptas voluptatem. Dolorem architecto atque nemo, dicta. Sint veritatis distinctio explicabo molestiae praesentium doloremque fugiat tempora quasi? Consequatur, magni, cupiditate.</p>
-			<h3>Get in touch</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt necessitatibus ab ipsa! Repellendus praesentium, facere magni alias, itaque veniam soluta recusandae reprehenderit impedit atque possimus expedita cupiditate enim. Quasi, veritatis.</p>
-			<h3>Get in touch</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt necessitatibus ab ipsa! Repellendus praesentium, facere magni alias, itaque veniam soluta recusandae reprehenderit impedit atque possimus expedita cupiditate enim. Quasi, veritatis, itaque veniam soluta recusandae reprehenderit impedit atque possimus expedita cupiditate enim. Quasi, veritatis.</p>
 	</div>
+
 	<div class="form-wrap">
 	<form class="cd-form floating-labels">
 		<fieldset>
@@ -181,71 +131,9 @@
 
 		      	<input type="submit" value="Send Message">
 		</fieldset>
-
-<!-- 		<fieldset>
-			<legend>Project Info</legend>
-
-			<div>
-				<h4>Budget</h4>
-
-				<p class="cd-select icon">
-					<select class="budget">
-						<option value="0">Select Budget</option>
-						<option value="1">&lt; $5000</option>
-						<option value="2">$5000 - $10000</option>
-						<option value="3">&gt; $10000</option>
-					</select>
-				</p>
-			</div> 
-
-			<div>
-				<h4>Project type</h4>
-
-				<ul class="cd-form-list">
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-1" checked>
-						<label for="cd-radio-1">Choice 1</label>
-					</li>
-						
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-2">
-						<label for="cd-radio-2">Choice 2</label>
-					</li>
-
-					<li>
-						<input type="radio" name="radio-button" id="cd-radio-3">
-						<label for="cd-radio-3">Choice 3</label>
-					</li>
-				</ul>
-			</div>
-
-			<div>
-				<h4>Features</h4>
-
-				<ul class="cd-form-list">
-					<li>
-						<input type="checkbox" id="cd-checkbox-1">
-						<label for="cd-checkbox-1">Option 1</label>
-					</li>
-
-					<li>
-						<input type="checkbox" id="cd-checkbox-2">
-						<label for="cd-checkbox-2">Option 2</label>
-					</li>
-
-					<li>
-						<input type="checkbox" id="cd-checkbox-3">
-						<label for="cd-checkbox-3">Option 3</label>
-					</li>
-				</ul>
-			</div>
-		    </div>
-		</fieldset> -->
 	</form>
 	</div>
 	</div>
-
-
 
 
 
@@ -254,10 +142,9 @@
 			<nav>
 				<ul class="footer-ul">
 					<li><a href="">Home</a></li>
-					<li><a href="">Services</a></li>
-					<li><a href="">About Us</a></li>
+					<li><a href="">Enquire</a></li>
+					<li><a href="">FAQ</a></li>
 					<li><a href="">Contact Us</a></li>
-					<li><a href="">We are here</a></li>
 				</ul>
 			</nav>
 			<span>

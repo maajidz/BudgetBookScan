@@ -1,0 +1,12 @@
+.faq-wrap p {
+  text-indent: 1rem;
+}
+@media only screen and (max-width: 641px) {
+  .faq-centered {
+    padding-left: 1rem;
+  }
+}
+.faq-q-title {
+  border-bottom: 1px solid #008080;
+  cursor: pointer;
+}

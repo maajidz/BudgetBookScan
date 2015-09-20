@@ -297,7 +297,11 @@ th {
   -moz-transition: opacity linear 0.1s;
   -o-transition: opacity linear 0.1s;
   -ms-transition: opacity linear 0.1s;
-  transition: opacity linear 0.1s;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .content div p {
   font-size: 14px;
@@ -321,7 +325,11 @@ th {
   -moz-transition: opacity ease-out 0.2s 0.1s;
   -o-transition: opacity ease-out 0.2s 0.1s;
   -ms-transition: opacity ease-out 0.2s 0.1s;
-  transition: opacity ease-out 0.2s 0.1s;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .content div h2,
 .content div h3 {
@@ -352,7 +360,11 @@ th {
   background-color: #008080;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .cd-service {
   position: relative;
@@ -466,7 +478,11 @@ th {
   .cd-service p {
     -webkit-transition: color, 0.5s;
     -moz-transition: color, 0.5s;
-    transition: color, 0.5s;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
   }
 }
 .scroller h2,
@@ -568,7 +584,6 @@ th {
   padding: 16px 20px;
   color: #fff;
   font-weight: bold;
-  float: right;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -813,7 +828,11 @@ th {
   cursor: text;
   -webkit-transition: top 0.2s, left 0.2s, font-size 0.2s;
   -moz-transition: top 0.2s, left 0.2s, font-size 0.2s;
-  transition: top 0.2s, left 0.2s, font-size 0.2s;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .js .floating-labels .cd-label.float {
   font-size: 1.2rem;
@@ -997,8 +1016,65 @@ li {
 .nav:after {
   clear: both;
 }
+.nav .ham {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .nav .ham {
+    display: block;
+    float: right;
+    margin: 2.5rem 4rem;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+    height: 45px;
+    position: relative;
+    width: 40px;
+    background: #333;
+  }
+  .nav .ham:hover {
+    background: #111;
+  }
+  .nav .ham div {
+    background-color: #999;
+    border-radius: 2px 2px 2px 2px;
+    height: 4px;
+    margin: 0.5rem 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 480px) {
+  .nav .ham {
+    margin: 2rem 2rem;
+  }
+}
 .top-nav {
   margin: 3rem 0;
+}
+@media only screen and (max-width: 800px) {
+  .top-nav {
+    display: none;
+    position: absolute;
+    right: 6.5rem;
+    top: 5.5rem;
+    margin: 0;
+    width: 77%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 490px) {
+  .top-nav {
+    right: 4.5rem;
+    top: 5rem;
+  }
 }
 .active {
   border: 1px solid #398080;
@@ -1007,14 +1083,28 @@ li {
   display: inline;
   margin: 0 0.5rem;
 }
+@media only screen and (max-width: 800px) {
+  .top-nav-li {
+    display: block;
+    width: 100%;
+  }
+}
 .top-nav-li a {
   padding: 1rem;
   background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.5);
   color: #fff;
   text-decoration: none;
+  width: 100%;
 }
 .top-nav-li a:hover {
   background: rgba(0,0,0,0.6);
+  border-bottom: 1px solid #008080;
+}
+@media only screen and (max-width: 800px) {
+  .top-nav-li a {
+    display: block;
+  }
 }
 .wrap {
   *zoom: 1;
@@ -1100,13 +1190,13 @@ li {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 28.105999999999998%;
+  width: 30.646666666666665%;
   margin-left: 0%;
   margin-right: 3%;
-  background: #008080;
-  padding: 1rem 2rem;
-  text-align: justify;
   height: 100%;
+  background: #008080;
+  padding: 1rem;
+  text-align: justify;
 }
 .form-container .sidebar:before,
 .form-container .sidebar:after {
@@ -1118,6 +1208,37 @@ li {
 }
 .form-container .sidebar:last-child {
   margin-right: 0%;
+}
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  .form-container .sidebar {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    text-align: center;
+    padding: 0;
+  }
+  .form-container .sidebar:before,
+  .form-container .sidebar:after {
+    content: '';
+    display: table;
+  }
+  .form-container .sidebar:after {
+    clear: both;
+  }
+  .form-container .sidebar:last-child {
+    margin-right: 0%;
+  }
+  .form-container .sidebar img {
+    width: 100px;
+  }
+}
+.form-container .sidebar .form-div,
+.form-container .sidebar .faq-div {
+  text-align: center;
 }
 .form-container .sidebar h2 {
   text-align: center;
@@ -1150,6 +1271,38 @@ li {
 .form-container .form-wrap:last-child {
   margin-right: 0%;
 }
+@media only screen and (max-width: 800px) {
+  .form-container .form-wrap {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .form-container .form-wrap:before,
+  .form-container .form-wrap:after {
+    content: '';
+    display: table;
+  }
+  .form-container .form-wrap:after {
+    clear: both;
+  }
+  .form-container .form-wrap:last-child {
+    margin-right: 0%;
+  }
+  .form-container .form-wrap input,
+  .form-container .form-wrap textarea {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 480px) {
+  .form-container .form-wrap input,
+  .form-container .form-wrap textarea {
+    width: 80%;
+  }
+}
 .footer {
   width: 100%;
   background: #008080;
@@ -1167,7 +1320,7 @@ li {
 .footer nav {
   *zoom: 1;
   width: auto;
-  max-width: 460px;
+  max-width: 320px;
   float: none;
   display: block;
   margin-right: auto;
@@ -1196,4 +1349,120 @@ li {
   display: block;
   text-align: center;
   margin: 3rem 0;
+}
+.faq-wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 63.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.faq-wrap:before,
+.faq-wrap:after {
+  content: '';
+  display: table;
+}
+.faq-wrap:after {
+  clear: both;
+}
+.faq-wrap:last-child {
+  margin-right: 0%;
+}
+.faq-wrap p {
+  text-indent: 1rem;
+}
+@media only screen and (min-width: 800px) and (max-width: 1080px) {
+  .faq-wrap {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 60%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .faq-wrap:before,
+  .faq-wrap:after {
+    content: '';
+    display: table;
+  }
+  .faq-wrap:after {
+    clear: both;
+  }
+  .faq-wrap:last-child {
+    margin-right: 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .faq-wrap {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .faq-wrap:before,
+  .faq-wrap:after {
+    content: '';
+    display: table;
+  }
+  .faq-wrap:after {
+    clear: both;
+  }
+  .faq-wrap:last-child {
+    margin-right: 0%;
+  }
+}
+.faq-centered {
+  *zoom: 1;
+  width: auto;
+  max-width: 800px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.faq-centered:before,
+.faq-centered:after {
+  content: '';
+  display: table;
+}
+.faq-centered:after {
+  clear: both;
+}
+@media only screen and (max-width: 800px) {
+  .faq-centered {
+    *zoom: 1;
+    width: auto;
+    max-width: 700px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .faq-centered:before,
+  .faq-centered:after {
+    content: '';
+    display: table;
+  }
+  .faq-centered:after {
+    clear: both;
+  }
+}
+@media only screen and (max-width: 641px) {
+  .faq-centered {
+    padding-left: 1rem;
+  }
+}
+.faq-q-title {
+  border-bottom: 1px solid #008080;
+  cursor: pointer;
 }
