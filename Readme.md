@@ -17,8 +17,20 @@ Icons & Logo
 
 Icons made by
 
-*  http://www.flaticon.com/authors/freepik
+*  <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">
+
+<div>Icon made by  CC BY 3.0</a></div>
+
+*  location
+*  question mark
+*  call center person
+
+
 *  http://www.flaticon.com/authors/anton-saputro
+
+*  form
+
+<div>Icon made by <a href="http://www.antonps.com" title="Anton Saputro">Anton Saputro</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
 Freepiks licensed by
 
