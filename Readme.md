@@ -13,8 +13,6 @@ Images
 
 * <a href="https://images.unsplash.com/3/alejandroescamilla-book.jpg?q=80&fm=jpg&s=863c3ea73cc0af3785af91d15109f1b4"> Unsplash</a>
 
-Icons & Logo
-
 Icons made by
 
 * <a href="http://codyhouse.co/gem/icons-filling-effect/">CodyHouse</a>
