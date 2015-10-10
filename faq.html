@@ -13,6 +13,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+	<script type="text/javascript" src="js/menu_toggle.js"></script>
 </head>
 <body>
 <div class="page">
@@ -22,14 +23,20 @@
 				<div class="logo-container">
 				<span>
 					<a href="#" class="logo">
-						<img src="images/budget-book.png" width="300" height="76" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
+						<img class="logo-img" src="images/budget-book.png" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
 					</a>
 				</span>
 				</div>
-				<nav class="nav">
-					<ul class="top-nav">
+				<nav class="nav" id="nav" role="navigation">
+				<div class="ham" onclick="toggle_visibility('top-nav');">
+				<div></div>
+				<div></div>
+				<div></div>
+				</div>
+
+					<ul class="top-nav" id="top-nav">
 						<li class="top-nav-li"><a href="index.html">Home</a></li>
-						<li class="top-nav-li"><a href="form.html">Enquire</a></li>
+						<li class="top-nav-li"><a href="form.html">Order</a></li>
 						<li class="top-nav-li"><a href="faq.html" class="active">FAQ</a></li>
 						<li class="top-nav-li"><a href="index.html#form-container">Contact Us</a></li>
 					</ul>
@@ -255,10 +262,10 @@ $('.qa-container').click(function () {
 		<div class="footer">
 			<nav>
 				<ul class="footer-ul">
-					<li><a href="">Home</a></li>
-					<li><a href="">Enquire</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Contact Us</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="form.html">Order</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="index.html#form-container">Contact Us</a></li>
 				</ul>
 			</nav>
 			<span>

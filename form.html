@@ -6,13 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Budget Book Scanning - From Books to Bytes" />
 	<meta name="keywords" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs." />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="../favicon.ico">
+	<meta name="author" content="" />
+	<link rel="shortcut icon" href="favicon.ico">
 	<title>BudgetBookScan - From Books to Bytes</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-
+        <script type="text/javascript" src="js/jquery-1.11.js"></script>
+        <script type="text/javascript" src="js/formCalc.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+	<script type="text/javascript" src="js/menu_toggle.js"></script>
 </head>
 <body>
 <div class="page">
@@ -22,16 +24,22 @@
 				<div class="logo-container">
 				<span>
 					<a href="#" class="logo">
-						<img src="images/budget-book.png" width="300" height="76" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
+						<img class="logo-img" src="images/budget-book.png" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
 					</a>
 				</span>
 				</div>
-				<nav class="nav">
-					<ul class="top-nav">
+				<nav class="nav" id="nav" role="navigation">
+				<div class="ham" onclick="toggle_visibility('top-nav');">
+				<div></div>
+				<div></div>
+				<div></div>
+				</div>
+
+					<ul class="top-nav" id="top-nav">
 						<li class="top-nav-li"><a href="index.html">Home</a></li>
-						<li class="top-nav-li"><a href="form.html">Enquire</a></li>
+						<li class="top-nav-li"><a href="form.html" class="active">Order</a></li>
 						<li class="top-nav-li"><a href="faq.html">FAQ</a></li>
-						<li class="top-nav-li"><a href="index.html#form-container" class="active">Contact Us</a></li>
+						<li class="top-nav-li"><a href="index.html#form-container">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -59,7 +67,8 @@
 
 		</div>
 	<div class="form-wrap">
-	<form class="cd-form floating-labels">
+	<form class="cd-form floating-labels" name="cd-form" id="cd-form" action="https://www.paypal.com/cgi-bin/webscr" method="POST">
+
 		<fieldset>
 			<legend>Your Order Specs</legend>
 
@@ -69,46 +78,43 @@
 
 			<div class="icon">
 <!-- 				<label class="cd-label" for="cd-name">Name</label>-->
-			<input class="user" maxlength="20" type="text" name="cd-name" id="cd-name" placeholder="Your Name" required>
+			<input class="user" maxlength="20" value="kjhkjhk kjh" type="text" name="fullname" id="fullname" placeholder="Your Name" required>
 		    </div> 
 		    <div class="icon">
 		    	<!-- <label class="cd-label" for="cd-email">Email</label> -->
-				<input class="email" maxlength="50" type="email" name="cd-email" id="cd-email" placeholder="Email" required>
+				<input class="email" value="maajidz@yahoo.com" maxlength="50" type="email" name="email" id="email" placeholder="Email" required> 
 		    </div>
 		    <div class="icon">
 		    	<!-- <label class="cd-label" for="cd-company">Company</label> -->
-				<input class="number" maxlength="10" type="text" name="cd-number" id="cd-number" placeholder="Amount Of Books - Minimum 30">
+				<input class="number" maxlength="10" type="number"  min="30" name="quantity_books" id="quantity" placeholder="No. Of Books - Minimum 30" required>
 		    </div> 
 		</fieldset>
 
  		<fieldset>
 			<legend>More Options</legend>
 
-<!-- 			<div>
-				<h4>Budget</h4>
 
-				<p class="cd-select icon">
-					<select class="budget">
-						<option value="0">Select Budget</option>
-						<option value="1">&lt; $5000</option>
-						<option value="2">$5000 - $10000</option>
-						<option value="3">&gt; $10000</option>
-					</select>
-				</p>
-			</div>  -->
 
 			<div>
 				<h4>Color Options</h4>
 
 				<ul class="cd-form-list">
 					<li>
-						<input type="radio" name="radio-button" id="cd-radio-1" checked>
-						<label for="cd-radio-1">Color Covers</label>
+						<input type="checkbox"  id="includecolorcovers" name="includecolorcovers" value="Include Color Covers" onclick="calculateTotal()" />
+						<label for="cd-radio-1">Color Covers</label><span class="pricing"> ($1/Book)</span>
 					</li>
+
 						
 					<li>
-						<input type="radio" name="radio-button" id="cd-radio-2">
-						<label for="cd-radio-2">Color Interiors</label>
+						<input  type="checkbox" value="Include Color Interiors" id="includecolorinteriors" name="includecolorinteriors" onclick="calculateTotal()" />
+						<label for="cd-radio-2">Color Interiors</label><span class="pricing"> ($2/Book)</span>
+					</li>
+<li>
+       <input type="number" class="quantity number-noicon" name="quantity_colorinteriors" id="quantity_colorinteriors" placeholder="No. Of Books" />
+</li>
+					<li>
+						<input  type="checkbox" id="includetitle_file" value="Include Title File" name="includetitle_file" onclick="calculateTotal()" />
+						<label for="cd-radio-3">Title file as per title of book)</label><span class="pricing"> ($0.75/Book)</span>
 					</li>
 				</ul>
 			</div>
@@ -118,28 +124,102 @@
 
 				<ul class="cd-form-list">
 					<li>
-						<input type="checkbox" id="cd-checkbox-1">
-						<label for="cd-checkbox-1">WORD</label>
+						<input type="checkbox" id="includeword" name="includeword" onclick="calculateTotal()" >
+						<label for="cd-checkbox-1">WORD</label><span class="pricing"> ($0.75/Book)</span>
 					</li>
 
 					<li>
-						<input type="checkbox" id="cd-checkbox-2">
-						<label for="cd-checkbox-2">EPUB</label>
+						<input type="checkbox"  id="includeepub" name="includeepub" onclick="calculateTotal()" >
+						<label for="cd-checkbox-2">EPUB</label><span class="pricing"> ($0.75/Book)</span>
 					</li>
 
 					<li>
-						<input type="checkbox" id="cd-checkbox-3">
-						<label for="cd-checkbox-3">MOBI</label>
+						<input type="checkbox"  id="includemobi" name="includemobi"  onclick="calculateTotal()">
+						<label for="cd-checkbox-3">MOBI</label><span class="pricing"> ($1/Book)</span>
 					</li>
 				</ul>
 			</div>
-					      	<input type="submit" value="Send Message">
+                        <div id="totalPrice"></div>
+
+
+
+<!-- paypal -->
+
+<input type="hidden" name="cpp_header_image" value="http://budgetbookscanning.com/images/budget-book.pngl">
+<input type="hidden" name="return" value="http://budgetbookscanning.com/thank-you.html">
+<input type="hidden" name="cancel_return" value="http://budgetbookscanning.com/cancel.html">
+<input type="hidden" name="business" value="orders@budgetbookscanning.com" />
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="cmd" value="_cart">
+
+<input type="hidden" name="" class="hidden_field">
+
+<input type="hidden" name="amount_1"  value="5" >
+<input type="hidden" name="item_name_1" value="No. Of Books" class="">
+<input type="hidden" name="quantity_1" value="" class="quantity_1" >
+
+<input type="hidden" name="amount_2"  class="amount_2"  value="" >
+<input type="hidden" class="item_name_2" name="item_name_2" value="hjhjhjg" class="">
+<input type="hidden" name="quantity_2" value="" class="quantity_2">
+
+<input type="hidden" name="amount_3"  value="" class="amount_3">
+<input type="hidden" name="item_name_3" class="item_name_3" value="" class="">
+<input type="hidden" name="quantity_3" value="" class="quantity_3">
+
+<input type="hidden" name="amount_4"  value="" class="amount_4" >
+<input type="hidden" name="item_name_4" value=""  class="item_name_4">
+<input type="hidden" name="quantity_4" value="" class="quantity_4">
+
+<input type="hidden" name="amount_5"  value="" class="amount_5" >
+<input type="hidden" name="item_name_5" value="" class="item_name_5">
+<input type="hidden" name="quantity_5" value="" class="quantity_5" >
+
+<input type="hidden" name="amount_6"  value="" class="amount_6" >
+<input type="hidden" name="item_name_6" value="" class="item_name_6">
+<input type="hidden" name="quantity_6" value="" class="quantity_6" >
+
+<input type="hidden" name="amount_7"  value="" class="amount_7" >
+<input type="hidden" name="item_name_7" value="" class="item_name_7">
+<input type="hidden" name="quantity_7" value="" class="quantity_7" >
+
+
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+<!-- paypal ends -->
+
+
 		</fieldset> 
 	</form>
 	</div>
 	</div>
 
 
+<script>
+// To hide the input fields
+$('#quantity_colorinteriors').hide();
+// to show & hide input fields on checkbox checked
+
+$('#includecolorinteriors').click(function() {
+  $('#quantity_colorinteriors')[this.checked ? "show" : "hide"]();
+  $('#quantity_colorinteriors').val('');
+});
+$('#cd-form input').on("click keyup", function(e) {
+  calculateTotal();
+  booksQuantityPaypal();
+  // colorCoverQPPaypal();
+  // titleFileQPPaypal();
+  // colorInteriorsQPPaypal();
+  // wordQPPaypal();
+  // epubQPPaypal();
+  // mobiQPPaypal();
+  codename();
+
+});
+</script>
+<!-- End of Script -->
 
 
 
@@ -147,10 +227,10 @@
 		<div class="footer">
 			<nav>
 				<ul class="footer-ul">
-					<li><a href="">Home</a></li>
-					<li><a href="">Enquire</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Contact Us</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="form.html">Order</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="index.html#form-container">Contact Us</a></li>
 				</ul>
 			</nav>
 			<span>
@@ -158,8 +238,12 @@
 			</span>
 
 		</div>
+
+		        <script type="text/javascript" src="js/calc2.js"></script>
+
 	</footer>
 
 </div>
 </body>
 </html>
+

@@ -10,9 +10,16 @@
 	<title>BudgetBookScan - From Books to Bytes</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-
+		
+	<!-- JavaScript Files -->
 	<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
 	<script type="text/javascript" src="js/menu_toggle.js"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- End JavaScript Files -->
+
 
 </head>
 <body>
@@ -23,7 +30,7 @@
 				<div class="logo-container">
 				<span>
 					<a href="#" class="logo">
-						<img src="images/budget-book.png" width="300" height="76" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
+						<img class="logo-img" src="images/budget-book.png" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
 					</a>
 				</span>
 				</div>
@@ -36,7 +43,7 @@
 
 					<ul class="top-nav" id="top-nav">
 						<li class="top-nav-li"><a href="index.html" class="active">Home</a></li>
-						<li class="top-nav-li"><a href="form.html">Enquire</a></li>
+						<li class="top-nav-li"><a href="form.html">Order</a></li>
 						<li class="top-nav-li"><a href="faq.html">FAQ</a></li>
 						<li class="top-nav-li"><a href="#form-container">Contact Us</a></li>
 					</ul>
@@ -61,12 +68,12 @@
 			<li class="cd-service cd-service-divider"><h2>How It Works</h2></li>
 			<li class="cd-service cd-service-1">
 				<h3>Count your books</h3>
-				<p>Obtain an accurate count of the titles to be scanned. All sizes are ok, page count does NOT matter. Minimum order is 30 books. (If you have less than 30 books to scan, please visit <a href="http:///www.boundbookscanning.com">boundbookscanning.com</a>).</p>
+				<p>Obtain an accurate count of the titles to be scanned. All sizes are ok, page count does NOT matter. Minimum order is 30 books. (If you have less than 30 books to scan, please visit <a href="http://www.boundbookscanning.com">boundbookscanning.com</a>).</p>
 			</li> <!-- cd-service -->
 
 			<li class="cd-service cd-service-2">
 				<h3>Fill the form</h3>
-				<p>Fill out our order form and specify your output requirements (below).</p>
+				<p>Fill out our order form and specify your output requirements <a href="form.html">(here)</a>.</p>
 			</li> <!-- cd-service -->
 
 			<li class="cd-service cd-service-3">
@@ -101,50 +108,50 @@
 					<p>200 Bates Drive, Monsey, NY 10952</p>
 					<p>(845)-352-3035</p>
 			</div>
-			<h3>Contact</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente reprehenderit eaque expedita omnis, perferendis corrupti dicta beatae facere. Reprehenderit rerum doloremque ipsam, adipisci repellendus! Quibusdam distinctio nisi doloremque totam commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tempore, voluptas voluptatem. Dolorem architecto atque nemo, dicta. Sint veritatis distinctio explicabo molestiae praesentium doloremque fugiat tempora quasi? Consequatur, magni, cupiditate.</p>
+			<h3></h3>
+                <p class="longtext"></p>
 	</div>
 
 	<div class="form-wrap">
-	<form class="cd-form floating-labels">
+	<form class="cd-form floating-labels" method="POST" action="form-to-email.php">
 		<fieldset>
 			<legend>Contact Us</legend>
 
 
 			<div class="icon">
-			<input class="user" maxlength="20" type="text" name="cd-name" id="cd-name" placeholder="Your Name" required>
+			<input class="user" maxlength="20" type="text" name="fullname" id="fullname" placeholder="Your Name" required>
 		    </div> 
 
 		    <div class="icon">
-				<input class="phone" maxlength="16" type="text" name="cd-phone" id="cd-phone" placeholder="Phone">
+				<input class="phone" maxlength="16" type="tel" name="phone" id="phone" placeholder="Phone">
 		    </div> 
 
 		    <div class="icon">
-				<input class="email" maxlength="50" type="email" name="cd-email" id="cd-email" placeholder="Email" required>
+				<input class="email" maxlength="50" type="email" name="email" id="email" placeholder="Email" required>
 		    </div>
 		    <div class="icon">
-				<input class="msg-title" maxlength="100" type="text" name="cd-name" id="cd-name" placeholder="Title" required>
+				<input class="msg-title" maxlength="100" type="text" name="title" id="title" placeholder="Title" required>
 		    </div>
 		    <div class="icon">
-      			<textarea class="message" name="cd-textarea" id="cd-textarea" maxlength="1024"  placeholder="Query" required></textarea>
+      			<textarea class="message" name="message" id="message" maxlength="1024"  placeholder="Query" required></textarea>
 			</div>
 
-		      	<input type="submit" value="Send Message">
+		      	<input type="submit" value="Send Message"  name="submit"  id="submit" >
 		</fieldset>
+			    <div id='msg_submitting'><h2>Submitting ...</h2></div>
+        <div id='msg_submitted'><h2>Thank you !<br> The form was submitted Successfully.</h2></div>
 	</form>
+
 	</div>
-	</div>
-
-
-
+</div>
 	<footer>
 		<div class="footer">
 			<nav>
 				<ul class="footer-ul">
-					<li><a href="">Home</a></li>
-					<li><a href="">Enquire</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Contact Us</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="form.html">Order</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="#form-container">Contact Us</a></li>
 				</ul>
 			</nav>
 			<span>

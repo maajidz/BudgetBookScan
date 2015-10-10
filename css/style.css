@@ -177,6 +177,11 @@ td,
 th {
   padding: 0;
 }
+
+.logo-img {
+  width: 300px;
+  height: 75px;
+}
 .tabs {
   position: relative;
   margin: 0px auto;
@@ -634,6 +639,7 @@ th {
 }
 .cd-form input[type="text"],
 .cd-form input[type="number"],
+.cd-form input[type="tel"],
 .cd-form input[type="email"],
 .cd-form textarea,
 .cd-form select,
@@ -648,6 +654,7 @@ th {
 }
 .cd-form input[type="text"],
 .cd-form input[type="number"],
+.cd-form input[type="tel"],
 .cd-form input[type="email"],
 .cd-form textarea,
 .cd-form select {
@@ -658,6 +665,7 @@ th {
 }
 .cd-form input[type="text"]:focus,
 .cd-form input[type="number"]:focus,
+.cd-form input[type="tel"]:focus,
 .cd-form input[type="email"]:focus,
 .cd-form textarea:focus,
 .cd-form select:focus {
@@ -738,6 +746,12 @@ th {
 .no-touch .cd-form input[type="submit"]:hover {
   background: #42a2e1;
 }
+.cd-form #msg_submitting {
+    display:none;
+    }
+.cd-form #msg_submitted {
+    display:none;
+}
 @media only screen and (min-width: 600px) {
   .cd-form + div,
   legend + div {
@@ -751,6 +765,7 @@ th {
 }
 .cd-form input[type="text"],
 .cd-form input[type="number"],
+.cd-form input[type="tel"],
 .cd-form input[type="email"],
 .cd-form textarea,
 .cd-form select {
@@ -791,6 +806,12 @@ th {
 }
 .cd-form [required].phone {
   background: url("../images/cd-icon-company.svg") no-repeat 16px center, url("../images/cd-required.svg") no-repeat top right;
+}
+.cd-form [required].books_quantity {
+  background:  url("../images/cd-required.svg") no-repeat top right;
+}
+.cd-form .number-noicon {
+  background:  url("../images/cd-required.svg") no-repeat top right;
 }
 .cd-form .number {
   background: url("../images/cd-icon-company.svg") no-repeat 16px center;
@@ -927,14 +948,12 @@ a {
 li {
   list-style: none;
 }
-.page,
-.content,
 .head-content {
   background: url("../images/header-bg.jpg");
   background-size: 100%;
   background-size: cover;
-  height: 450px;
-  height: 80vh;
+  height: 500px;
+  /*height: 80vh;*/
 }
 .header {
   *zoom: 1;
@@ -1190,10 +1209,9 @@ li {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 30.646666666666665%;
+  width: 26.88888%;
   margin-left: 0%;
   margin-right: 3%;
-  height: 100%;
   background: #008080;
   padding: 1rem;
   text-align: justify;
@@ -1235,6 +1253,10 @@ li {
   .form-container .sidebar img {
     width: 100px;
   }
+  .longtext {
+    text-align: justify;
+    padding: 0 1rem;
+  }
 }
 .form-container .sidebar .form-div,
 .form-container .sidebar .faq-div {
@@ -1243,6 +1265,7 @@ li {
 .form-container .sidebar h2 {
   text-align: center;
 }
+
 .form-container .sidebar img {
   display: block;
   margin: 0 auto;
@@ -1350,7 +1373,15 @@ li {
   text-align: center;
   margin: 3rem 0;
 }
-.faq-wrap {
+.thank-you-h2 {
+  text-align: center;
+  margin-top: 2.2rem;
+}
+.thank-you-p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.thank-you-wrap,.faq-wrap {
   *zoom: 1;
   float: left;
   clear: none;
@@ -1359,22 +1390,22 @@ li {
   margin-left: 0%;
   margin-right: 0%;
 }
-.faq-wrap:before,
-.faq-wrap:after {
+.thank-you-wrap:before,.faq-wrap:before,
+.thank-you-wrap:after,.faq-wrap:after {
   content: '';
   display: table;
 }
-.faq-wrap:after {
+.thank-you-wrap:after,.faq-wrap:after {
   clear: both;
 }
 .faq-wrap:last-child {
   margin-right: 0%;
 }
-.faq-wrap p {
+.thank-you-wrap p,.faq-wrap p {
   text-indent: 1rem;
 }
 @media only screen and (min-width: 800px) and (max-width: 1080px) {
-  .faq-wrap {
+  .thank-you-wrap,.faq-wrap {
     *zoom: 1;
     float: left;
     clear: none;
@@ -1383,20 +1414,27 @@ li {
     margin-left: 0%;
     margin-right: 0%;
   }
-  .faq-wrap:before,
-  .faq-wrap:after {
+  .thank-you-wrap:before,.faq-wrap:before,
+  .thank-you-wrap:after,.faq-wrap:after {
     content: '';
     display: table;
   }
-  .faq-wrap:after {
+  .thank-you-wrap:after,.faq-wrap:after {
     clear: both;
   }
   .faq-wrap:last-child {
     margin-right: 0%;
   }
+  .form-container .sidebar {
+    width: 37.78888%;
+  }
+  .cd-form {
+    width: 70%;
+    margin-left: 7.7777%;
+  }
 }
 @media only screen and (max-width: 800px) {
-  .faq-wrap {
+  .thank-you-wrap,.faq-wrap {
     *zoom: 1;
     float: left;
     clear: none;
@@ -1405,12 +1443,12 @@ li {
     margin-left: 0%;
     margin-right: 3%;
   }
-  .faq-wrap:before,
-  .faq-wrap:after {
+  .thank-you-wrap:before,.faq-wrap:before,
+  .thank-you-wrap:after,.faq-wrap:after {
     content: '';
     display: table;
   }
-  .faq-wrap:after {
+  .thank-you-wrap:after,.faq-wrap:after {
     clear: both;
   }
   .faq-wrap:last-child {
@@ -1465,4 +1503,51 @@ li {
 .faq-q-title {
   border-bottom: 1px solid #008080;
   cursor: pointer;
+}
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+
+  .main-desc {
+    padding: 1rem 2rem;
+  }
+  .main-desc h1 {
+    font-size: 1.5rem;
+
+  }
+  .main-desc h3 {
+    text-align: center;
+  }
+  .main-desc p {
+    text-align: justify;
+  }
+  .head-content {
+    height: 518px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 400px) {
+  .logo-img {
+    width:250px;
+    height:auto;
+  }
+ .head-content {
+    height: 569px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+  .logo-img {
+    width: 200px;
+    height: auto;
+    margin-top: .5rem;
+  }
+  .head-content {
+    height: 601px;
+  }
+}
+#totalPrice {
+    font-size: 1.5rem;
+    border-top: 1px dotted #fff;
+    border-bottom: 1px dotted #fff;
+    padding: 1rem 0;
+}
+.pricing {
+    color:#008080;
 }

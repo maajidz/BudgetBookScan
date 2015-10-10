@@ -1,0 +1,1 @@
+[09-Oct-2015 04:41:16 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/marc1247/public_html/dynamic.php:11) in /home2/marc1247/public_html/dynamic.php on line 24
