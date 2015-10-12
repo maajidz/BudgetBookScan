@@ -4,8 +4,8 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Budget Book Scanning - From Books to Bytes" />
-	<meta name="keywords" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs." />
+	<meta name="description" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs." />
+	<meta name="keywords" content="bookscan,scan, books, ocr, cheap, budget, conversion, digitization " />
 	<meta name="author" content="" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<title>BudgetBookScan - From Books to Bytes</title>
@@ -60,7 +60,7 @@
 		<div class="form-container">
 		<div class="sidebar">
 			<div class="form-div">
-				<h2>Enquiry Form</h2>
+				<h2>Order Form</h2>
 				<img src="images/form.svg" rel="faq" alt="faq">
 				<p>Fill the form with your Order Specs.</p>
 			</div>
@@ -78,11 +78,11 @@
 
 			<div class="icon">
 <!-- 				<label class="cd-label" for="cd-name">Name</label>-->
-			<input class="user" maxlength="20" value="kjhkjhk kjh" type="text" name="fullname" id="fullname" placeholder="Your Name" required>
+			<input class="user" maxlength="20" type="text" name="fullname" id="fullname" placeholder="Your Name" required>
 		    </div> 
 		    <div class="icon">
 		    	<!-- <label class="cd-label" for="cd-email">Email</label> -->
-				<input class="email" value="maajidz@yahoo.com" maxlength="50" type="email" name="email" id="email" placeholder="Email" required> 
+				<input class="email" maxlength="50" type="email" name="email" id="email" placeholder="Email" required> 
 		    </div>
 		    <div class="icon">
 		    	<!-- <label class="cd-label" for="cd-company">Company</label> -->
@@ -139,6 +139,17 @@
 					</li>
 				</ul>
 			</div>
+
+			<div>
+				<h4>Special Instructions:</h4>
+
+				<ul class="cd-form-list">
+					<li>
+					<li>
+						<input type="text" placeholder="Any special instructions?" class="number-noicon" name="os0" maxlength="200">
+					</li>
+				</ul>
+			</div>
                         <div id="totalPrice"></div>
 
 
@@ -153,6 +164,10 @@
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="button_subtype" value="Services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Add special instructions to the seller:">
+<input type="hidden" name="on0" value="Comments:">
 
 <input type="hidden" name="" class="hidden_field">
 
@@ -200,8 +215,8 @@
 <script>
 // To hide the input fields
 $('#quantity_colorinteriors').hide();
-// to show & hide input fields on checkbox checked
 
+// to show & hide input fields on checkbox checked
 $('#includecolorinteriors').click(function() {
   $('#quantity_colorinteriors')[this.checked ? "show" : "hide"]();
   $('#quantity_colorinteriors').val('');
