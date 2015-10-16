@@ -26,7 +26,7 @@ Icons made by
 
 * Call Center Person
 
-<div>Icons made by <a href="https://www.iconfinder.com/Lexter" title="Honza Dousek">Honza Dousek</a> from <a href="http://www.iconfinder.com" title="Iconfinder">www.iconfinder.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+* <div>Icons made by <a href="https://www.iconfinder.com/Lexter" title="Honza Dousek">Honza Dousek</a> from <a href="http://www.iconfinder.com" title="Iconfinder">www.iconfinder.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
 * PDF
 
