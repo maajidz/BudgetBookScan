@@ -482,10 +482,6 @@ th {
   height: 100%;
   display: none;
 }
-.samples-imgbox-h3 {
-  border-bottom: 1px dotted #008080;
-  display: inline-block;
-}
 .samples-imgbox img {
     width: 100%;
 }
@@ -510,10 +506,7 @@ th {
 .samples-a:hover {
   background-color: #111;
 }
-.samples-a img {
 
-  
-}
 
 @media only screen and (min-width: 1024px) {
   .cd-service {
@@ -834,16 +827,9 @@ th {
 .cd-form #msg_submitted {
     display:none;
 }
-.link-to-formats {
-  color: #333;
-  border-bottom: 1px dotted #666;
-}
-.link-to-formats:hover {
-  color: #444;
-}
-.samples-p {
-    line-height: 1.3rem;
-}
+
+
+
 @media only screen and (min-width: 600px) {
   .cd-form + div,
   legend + div {

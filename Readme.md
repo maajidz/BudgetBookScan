@@ -23,6 +23,13 @@ Icons made by
 * Question Mark
 * Call Center Person
 
+<div>Icons made by <a href="https://www.iconfinder.com/Lexter" title="Honza Dousek">Honza Dousek</a> from <a href="http://www.iconfinder.com" title="Iconfinder">www.iconfinder.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+
+* PDF
+* EPUB
+* DOCX
+
+
 * <div>Icons made by <a href="http://www.antonps.com" title="Anton Saputro">Anton Saputro</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
 * Form Icon
