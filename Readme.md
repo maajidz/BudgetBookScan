@@ -2,8 +2,6 @@ Resources
 
 * https://p.w3layouts.com/demos/notebook/web/
 
-* http://tympanus.net/codrops/2012/04/12/animated-content-tabs-with-css3/
-
 
 Logo
 
