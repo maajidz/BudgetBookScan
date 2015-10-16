@@ -446,6 +446,9 @@ th {
 }
 .samples {
 }
+.samples-icon {
+  padding-left: 2.5rem;
+}
 .samples-imgbox {
   position: relative;
   width:32.95%;
@@ -496,7 +499,7 @@ th {
   padding: 0;
 }
 .samples-li {
-  width: 24.3333333%;
+  width: 24.33333%;
   display: inline-block;
 }
 .samples-a {
