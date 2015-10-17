@@ -846,6 +846,12 @@ th {
 .samples-p {
     line-height: 1.3rem;
 }
+.neptues {
+  border-bottom: 1px dotted #aaa;
+}
+.neptues:hover {
+  border-bottom: 1px dotted #fff;
+}
 @media only screen and (min-width: 600px) {
   .cd-form + div,
   legend + div {
