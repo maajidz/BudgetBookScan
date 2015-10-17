@@ -519,11 +519,10 @@ th {
 
   
 }
-
-.neptues {
+a.neptues {
   border-bottom: 1px dotted #bbb;
 }
-.neptues:hover {
+a.neptues:hover {
   border-bottom: 1px dotted #fff;
 }
 .cd-service-1 {
@@ -1000,7 +999,7 @@ th {
 .footer nav {
   *zoom: 1;
   width: auto;
-  max-width: 320px;
+  max-width: 295px;
   float: none;
   display: block;
   margin-right: auto;
