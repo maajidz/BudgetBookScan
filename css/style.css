@@ -409,6 +409,9 @@ th {
 .cd-service.cd-service-4::before {
   background-image: url("../images/cd-icon-4-small.svg");
 }
+.cd-service.cd-service-5::before {
+  background-image: url("../images/cd-icon-1-small.svg");
+}
 .cd-service h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -499,7 +502,7 @@ th {
   padding: 0;
 }
 .samples-li {
-  width: 24.33333%;
+  width: 24.3333%;
   display: inline-block;
 }
 .samples-a {
@@ -517,10 +520,30 @@ th {
   
 }
 
+.neptues {
+  border-bottom: 1px dotted #bbb;
+}
+.neptues:hover {
+  border-bottom: 1px dotted #fff;
+}
+.cd-service-1 {
+  padding: 6em 2em 4.2em 2em;
+}
+.cd-service-2 {
+  padding: 6em 2em 7em 2em;
+}
+.cd-service-3 {
+  padding: 6em 2em 4em 2em;
+}
+.cd-service-4 {
+  padding: 6em 2em 4em 2em;
+}
+.cd-service-5 {
+  padding: 6em 2em 4.2em 2em;
+}
 @media only screen and (min-width: 1024px) {
   .cd-service {
     margin-left: 420px;
-    padding: 6em 2em;
   }
   .cd-service::before {
     height: 325px;
@@ -543,6 +566,9 @@ th {
   }
   .cd-service.cd-service-4::before {
     background-image: url("../images/cd-icon-4-large.svg");
+  }
+  .cd-service.cd-service-5::before {
+    background-image: url("../images/cd-icon-1-large.svg");
   }
   .cd-service h2 {
     font-size: 30px;
@@ -845,12 +871,6 @@ th {
 }
 .samples-p {
     line-height: 1.3rem;
-}
-.neptues {
-  border-bottom: 1px dotted #aaa;
-}
-.neptues:hover {
-  border-bottom: 1px dotted #fff;
 }
 @media only screen and (min-width: 600px) {
   .cd-form + div,

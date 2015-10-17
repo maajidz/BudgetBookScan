@@ -56,4 +56,4 @@ gulp.task('wsh', function(){
 });
 
 
-gulp.task('default', ['wsh', 'connect',]);
+gulp.task('default', ['wsh',]);
