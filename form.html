@@ -4,31 +4,42 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs." />
-	<meta name="keywords" content="bookscan,scan, books, ocr, cheap, budget, conversion, digitization " />
-	<meta name="author" content="" />
+	<title>BudgetBookScanning - From Books to Bytes</title>
+	<meta name="description" content="Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs. Call Us 845-352-3035" />
+	<meta name="keywords" content="budget book scan, book scan service, book conversion service, scanning, book digitization service, scan books service, ebook conversion, convert books to pdf, convert books to ebook, convert books to mobi" />
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Budget Book Scanning" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<title>BudgetBookScan - From Books to Bytes</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="js/jquery-1.11.js"></script>
-        <script type="text/javascript" src="js/formCalc.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.js"></script>
+    <script type="text/javascript" src="js/formCalc.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
 	<script type="text/javascript" src="js/menu_toggle.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-69160439-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <div class="page">
 	<div class="head-content">
 	<header class="header">
 			<div class="head">
 				<div class="logo-container">
 				<span>
-					<a href="#" class="logo">
-						<img class="logo-img" src="images/budget-book.png" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
+					<a href="http://budgetbookscanning.com" class="logo">
+						<img class="logo-img" src="images/budget-book-logo-bold-small.png" alt="Budget Book Scanning Logo" rel="Budget Book Scanning Logo">
 					</a>
 				</span>
 				</div>
-				<nav class="nav" id="nav" role="navigation">
+				<nav class="nav" id="nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<div class="ham" onclick="toggle_visibility('top-nav');">
 				<div></div>
 				<div></div>
@@ -36,21 +47,23 @@
 				</div>
 
 					<ul class="top-nav" id="top-nav">
-						<li class="top-nav-li"><a href="index.html">Home</a></li>
-						<li class="top-nav-li"><a href="form.html" class="active">Order</a></li>
-						<li class="top-nav-li"><a href="faq.html">FAQ</a></li>
-						<li class="top-nav-li"><a href="samples.html">Samples</a></li>
+						<li class="top-nav-li" itemprop="url"><a href="http://budgetbookscanning.com/" title="Home" itemprop="name" class="active">Home</a></li>
+						<li class="top-nav-li" itemprop="url"><a title="Order" itemprop="name" href="form.html">Order</a></li>
+						<li class="top-nav-li" itemprop="url"><a title="FAQ" itemprop="name" href="faq.html">FAQ</a></li>
+						<li class="top-nav-li" itemprop="url"><a title="Samples" itemprop="name" href="samples.html">Samples</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<div class="wrap">
 			<div class="main-desc">
-				<h1>Budget Book Scanning </h1>
-				<h3>Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs.</h3>
+				<h1 itemprop="headline">Budget Book Scanning </h1>
+				<h3 itemprop="description">Budget Book Scanning offers an easy, low cost alternative for your book conversion and digitization needs.</h3>
 				<p>
 					Our company is here to help you convert your library to various e-formats, therefore easing up storage space, providing enhanced search functionality, lightens your transport load, and allowing you to access all your favorite titles on any electronic device of your choice.
-					“Budget” Book Scanning, a subsidiary of Bound Book Scanning Inc. which has been providing various other book scanning services since 2010, is dedicated solely to providing destructive scanning services, with a simple order process, at a cut-rate low price.
+					“Budget” Book Scanning, a subsidiary of Bound Book Scanning Inc. which has been providing various other book scanning services since 2010, is dedicated solely to providing destructive scanning services, with a simple order process, at a cut-rate
+					</br>
+					<span class="home-bold-text">low price of $5 per book of any size.</span>
 				</p>
 			</div>
 		</div>
@@ -86,7 +99,8 @@
 		    </div>
 		    <div class="icon">
 		    	<!-- <label class="cd-label" for="cd-company">Company</label> -->
-				<input class="number" maxlength="10" type="number"  min="30" name="quantity_books" id="quantity" placeholder="No. Of Books - Minimum 30" required>
+				<input class="number" maxlength="10" type="number"  min="10" name="quantity_books" id="quantity" placeholder="No. Of Books - Minimum 10" required>
+				<span class="span-book-price">$5 per book</span>
 		    </div> 
 		</fieldset>
 
@@ -114,7 +128,7 @@
 </li>
 					<li>
 						<input  type="checkbox" id="includetitle_file" value="Include Title File" name="includetitle_file" onclick="calculateTotal()" />
-						<label for="cd-radio-3">Title file as per title of book)</label><span class="pricing"> ($0.75/Book)</span>
+						<label for="cd-radio-3">Title file (as per title of book)</label><span class="pricing"> ($0.75/Book)</span>
 					</li>
 				</ul>
 			</div>
@@ -140,7 +154,7 @@
 				</ul>
 			</div>
 
-			<div>
+<!-- 			<div>
 				<h4>Special Instructions:</h4>
 
 				<ul class="cd-form-list">
@@ -149,7 +163,7 @@
 						<input type="text" placeholder="Any special instructions?" class="number-noicon" name="os0" maxlength="200">
 					</li>
 				</ul>
-			</div>
+			</div> -->
                         <div id="totalPrice"></div>
 
 
@@ -157,7 +171,7 @@
 <!-- paypal -->
 
 <input type="hidden" name="cpp_header_image" value="http://budgetbookscanning.com/images/budget-book.pngl">
-<input type="hidden" name="return" value="http://budgetbookscanning.com/thank-you.html">
+<input type="hidden" name="return" value="http://budgetbookscanning.com/thank-you-paypal.html#thank-you-paypal">
 <input type="hidden" name="cancel_return" value="http://budgetbookscanning.com/cancel.html">
 <input type="hidden" name="business" value="orders@budgetbookscanning.com" />
 <input type="hidden" name="upload" value="1">
@@ -238,7 +252,7 @@ $('#cd-form input').on("click keyup", function(e) {
 
 
 
-	<footer>
+	<footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 		<div class="footer">
 			<nav>
 				<ul class="footer-ul">

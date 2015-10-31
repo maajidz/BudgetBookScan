@@ -39,3 +39,4 @@ Icons made by <a href="http://codyhouse.co/gem/icons-filling-effect/">CodyHouse<
 
 * Form Icon
 
+https://commons.wikimedia.org/wiki/File:Epub_logo_color.svg
